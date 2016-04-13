@@ -46,7 +46,7 @@ export default class Navbar extends Component {
                             }}
                             to="/"
                         >
-                            AnnArbor Pictures
+                            Lansing Lawn & Garden
                         </NavItem>
                     </Flex>
                     <Drawer

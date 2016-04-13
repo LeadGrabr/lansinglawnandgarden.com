@@ -2,7 +2,7 @@
 import { default as React, Component, PropTypes } from 'react'
 import { Banner, Base } from 'rebass'
 import { Page } from 'components'
-import { default as weddingSelfie } from './wedding-selfie.jpg'
+import { default as lawnMower } from './lawn-mower.jpg'
 import { default as color } from 'color'
 import { default as LeadForm } from '@leadgrabr/lead-form'
 import { connect } from 'redux-await'
@@ -28,7 +28,7 @@ export default class HomeBanner extends Component {
         return (
             <Banner
                 align="center"
-                backgroundImage={weddingSelfie}
+                backgroundImage={lawnMower}
                 p={2}
                 style={{
                     backgroundPosition: '27%',
@@ -39,16 +39,12 @@ export default class HomeBanner extends Component {
                 <Base
                     px={2}
                     style={{
-                        backgroundColor: color(colors.black).alpha(0.2).rgbString()
+                        backgroundColor: color(colors.black).alpha(0.7).rgbString()
                     }}
                 >
                     <Page.Title>
-                        Get rates from the best<br/>
-                        photographers in Ann Arbor
+                        Show me an instant quote.
                     </Page.Title>
-                    <Page.Subtitle>
-                        Just tell us how we can reach you.
-                    </Page.Subtitle>
                     <Base
                         mb={3}
                         mt={1}

@@ -5,6 +5,9 @@ import { throttle } from 'lodash'
 import { GoogleMapLoader, GoogleMap, Marker } from 'react-google-maps'
 import { triggerEvent } from 'react-google-maps/lib/utils'
 
+const lat = 42.7325
+const lng = -84.5555
+
 /*
  * This is the modify version of:
  * https://developers.google.com/maps/documentation/javascript/examples/event-arguments
@@ -21,11 +24,8 @@ export default class _GoogleMap extends Component {
     state = {
         markers: [
             {
-                position: {
-                    lat: 42.280826,
-                    lng: -83.743038,
-                },
-                key: 'Ann Arbor',
+                position: { lat, lng },
+                key: 'Lansing',
                 defaultAnimation: 2,
             }
         ]
@@ -97,7 +97,7 @@ export default class _GoogleMap extends Component {
                 }
                 googleMapElement={
                     <GoogleMap
-                        defaultCenter={{ lat: 42.280826, lng: -83.743038 }}
+                        defaultCenter={{ lat, lng }}
                         defaultZoom={10}
                         onClick={::this.handleMapClick}
                         options={{

@@ -16,13 +16,13 @@ const baseColors = {
 
 const colors = {
     ...baseColors,
-    primary: baseColors.pink,
+    primary: baseColors.green,
     secondary: baseColors.white,
     default: baseColors.black,
     info: baseColors.blue,
     success: baseColors.green,
     warning: baseColors.orange,
-    error: baseColors.pink
+    error: baseColors.red
 }
 
 const scale = [0, 10, 25, 48, 64]

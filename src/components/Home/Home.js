@@ -14,11 +14,12 @@ const Home = (props, { rebass: { colors } }) =>
                 mb={2}
                 style={{ textAlign: 'center' }}
             >
-                Fall in Love with Ann Arbor Pictures!
+                Welcome to Lansing Lawn Care
             </Heading>
             <Text style={{ textAlign: 'center' }}>
-                Check out some of the latest and greatest
-                photographs from photographers right here in Ann Arbor.
+                Mauris accumsan eros eget libero posuere vulputate.
+                Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+                Sed nec felis pellentesque, lacinia dui sed, ultricies sapien.
             </Text>
             <Gallery
                 count={6}
