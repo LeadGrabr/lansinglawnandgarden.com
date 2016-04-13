@@ -4,6 +4,7 @@ import { BottomBar, Page, GoogleMap } from 'components'
 import { default as Banner } from './Banner'
 import { default as Gallery } from 'Gallery'
 import { default as About } from 'About'
+import { default as Badges } from './Badges'
 
 const Home = (props, { rebass: { colors } }) =>
     <Page>
@@ -21,13 +22,7 @@ const Home = (props, { rebass: { colors } }) =>
                 Etiam elit elit, elementum sed varius at, adipiscing vitae est.
                 Sed nec felis pellentesque, lacinia dui sed, ultricies sapien.
             </Text>
-            <Gallery
-                count={6}
-                imgProps={{
-                    m: 2 // eslint-disable-line id-length
-                }}
-                size={250}
-            />
+            <Badges/>
         </Page.Content>
         <Section style={{ backgroundColor: colors.info }}>
             <Page.Content>

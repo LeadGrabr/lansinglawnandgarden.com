@@ -1,6 +1,5 @@
 import './style.scss'
 import { Component, PropTypes } from 'react'
-// import Color from 'color'
 
 const baseColors = {
     black: '#333',
@@ -35,12 +34,18 @@ export default class Theme extends Component {
     };
 
     static childContextTypes = {
+        breakpoints: PropTypes.object,
         rebass: PropTypes.object,
         reflexbox: PropTypes.object
     };
 
     getChildContext() {
         return {
+            breakpoints: {
+                small: 425,
+                medium: 768,
+                large: 1024
+            },
             rebass: {
                 colors,
                 fontSizes,
