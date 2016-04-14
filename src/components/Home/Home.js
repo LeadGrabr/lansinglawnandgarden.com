@@ -5,6 +5,7 @@ import { default as Banner } from './Banner'
 import { default as Gallery } from 'Gallery'
 import { default as About } from 'About'
 import { default as Badges } from './Badges'
+import { default as Services } from './Services'
 
 const Home = (props, { rebass: { colors } }) =>
     <Page>
@@ -23,6 +24,7 @@ const Home = (props, { rebass: { colors } }) =>
                 Sed nec felis pellentesque, lacinia dui sed, ultricies sapien.
             </Text>
             <Badges/>
+            <Services/>
         </Page.Content>
         <Section style={{ backgroundColor: colors.info }}>
             <Page.Content>
