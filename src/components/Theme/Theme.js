@@ -72,6 +72,9 @@ export default class Theme extends Component {
                 NavItem: {
                     fontWeight: 200
                 },
+                SectionHeader: {
+                    textAlign: 'center'
+                },
                 Text: {
                     fontSize: fontSizes[5],
                     marginBottom: scale[2],

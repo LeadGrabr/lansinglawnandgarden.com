@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 
 const badgeSize = 280
 
-const Badge = ({ heading, icon, iconSize, showTextOnSmall, text, width }, { rebass: { colors } }) =>
+const Badge = ({ heading, icon, iconSize, showTextOnSmall, width }, { rebass: { colors } }) =>
     <Base
         circle
         my={2}
@@ -48,7 +48,6 @@ Badge.defaultProps = {
 Badge.propTypes = {
     icon: PropTypes.func.isRequired,
     iconSize: PropTypes.number.isRequired,
-    text: PropTypes.string.isRequired,
     width: PropTypes.number.isRequired
 }
 

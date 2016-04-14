@@ -6,35 +6,32 @@ import { default as Gallery } from 'Gallery'
 import { default as About } from 'About'
 import { default as Badges } from './Badges'
 import { default as Services } from './Services'
+import { default as Testimonials } from './Testimonials'
 
 const Home = (props, { rebass: { colors } }) =>
     <Page>
         <Banner/>
         <Page.Content>
-            <Heading
-                level={2}
-                mb={2}
-                style={{ textAlign: 'center' }}
-            >
-                Welcome to Lansing Lawn Care
-            </Heading>
-            <Text style={{ textAlign: 'center' }}>
-                Mauris accumsan eros eget libero posuere vulputate.
-                Etiam elit elit, elementum sed varius at, adipiscing vitae est.
-                Sed nec felis pellentesque, lacinia dui sed, ultricies sapien.
-            </Text>
-            <Badges/>
-            <Services/>
+            <Section>
+                <SectionHeader heading="Welcome to Lansing Lawn Care"/>
+                <Text style={{ textAlign: 'center' }}>
+                    Mauris accumsan eros eget libero posuere vulputate.
+                    Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+                    Sed nec felis pellentesque, lacinia dui sed, ultricies sapien.
+                </Text>
+            </Section>
+            <Section>
+                <Badges/>
+            </Section>
+            <Section>
+                <SectionHeader heading="Our Services"/>
+                <Services/>
+            </Section>
+            <Section>
+                <SectionHeader heading="Customer Testimonials"/>
+                <Testimonials/>
+            </Section>
         </Page.Content>
-        <Section style={{ backgroundColor: colors.info }}>
-            <Page.Content>
-                <SectionHeader
-                    heading="Some other alternate heading"
-                    style={{ textAlign: 'center' }}
-                />
-                <About/>
-            </Page.Content>
-        </Section>
         <Base>
             <GoogleMap style={{ height: 300 }}/>
         </Base>
