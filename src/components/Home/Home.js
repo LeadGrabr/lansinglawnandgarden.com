@@ -1,14 +1,12 @@
 import { default as React, PropTypes } from 'react'
-import { Base, Heading, Section, SectionHeader, Text } from 'rebass'
+import { Base, Section, SectionHeader, Text } from 'rebass'
 import { BottomBar, Page, GoogleMap } from 'components'
 import { default as Banner } from './Banner'
-import { default as Gallery } from 'Gallery'
-import { default as About } from 'About'
 import { default as Badges } from './Badges'
 import { default as Services } from './Services'
 import { default as Testimonials } from './Testimonials'
 
-const Home = (props, { rebass: { colors } }) =>
+const Home = () =>
     <Page>
         <Banner/>
         <Page.Content>

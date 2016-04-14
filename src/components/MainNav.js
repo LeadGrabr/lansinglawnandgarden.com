@@ -21,15 +21,6 @@ const MainNav = () =>
         </NavItem>
         <NavItem
             is={Link}
-            to="/gallery"
-        >
-            Photo Gallery
-        </NavItem>
-        <NavItem>
-            Blog
-        </NavItem>
-        <NavItem
-            is={Link}
             to="/contact"
         >
             Contact

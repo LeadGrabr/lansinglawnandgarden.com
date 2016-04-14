@@ -68,6 +68,7 @@ Testimonial.propTypes = {
 
 @connect(({ app: { width } }) => ({ width }))
 
+/* eslint-disable react/prefer-stateless-function */
 export default class Testimonials extends Component {
 
     static propTypes = {

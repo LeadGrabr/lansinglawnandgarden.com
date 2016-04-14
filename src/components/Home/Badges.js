@@ -1,14 +1,14 @@
 import { default as React, Component, createElement, PropTypes } from 'react'
 import { Flex } from 'reflexbox'
 import { default as Accessible } from 'react-icons/lib/md/accessible'
-import { Base, Heading, Text } from 'rebass'
+import { Base, Heading } from 'rebass'
 import { default as Leaf } from 'react-icons/lib/fa/leaf'
 import { default as MagicWand } from 'react-icons/lib/fa/magic'
 import { connect } from 'react-redux'
 
 const badgeSize = 280
 
-const Badge = ({ heading, icon, iconSize, showTextOnSmall, width }, { rebass: { colors } }) =>
+const Badge = ({ heading, icon, iconSize, width }, { rebass: { colors } }) =>
     <Base
         circle
         my={2}
@@ -46,6 +46,7 @@ Badge.defaultProps = {
 }
 
 Badge.propTypes = {
+    heading: PropTypes.string.isRequired,
     icon: PropTypes.func.isRequired,
     iconSize: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired
@@ -58,6 +59,7 @@ Badge.contextTypes = {
 
 @connect(({ app: { width } }) => ({ width }))
 
+/* eslint-disable react/prefer-stateless-function */
 export default class Badges extends Component {
 
     static propTypes = {
@@ -67,8 +69,8 @@ export default class Badges extends Component {
     render() {
         return (
             <Flex
-                wrap
                 justify="space-around"
+                wrap
             >
                 <Badge
                     {...this.props}

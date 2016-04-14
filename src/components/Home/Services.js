@@ -1,5 +1,5 @@
-import { default as React } from 'react'
-import { Flex, Box } from 'reflexbox'
+import { default as React, PropTypes } from 'react'
+import { Flex } from 'reflexbox'
 import { default as hedgeTrimming } from './hedge-trimming.jpg'
 import { default as leafPickup } from './leaf-pickup-and-bagging.jpg'
 import { default as brushRemoval } from './brush-removal.jpg'
@@ -15,7 +15,7 @@ const Service = ({ img, name }) =>
         align="flex-end"
         m={1}
         style={{
-            backgroundImage: `url(${img})`,
+            backgroundImage: `url('${img}')`,
             backgroundSize: 'cover',
             height: serviceSize,
             width: serviceSize
@@ -33,6 +33,11 @@ const Service = ({ img, name }) =>
             {name}
         </Heading>
     </Flex>
+
+Service.propTypes = {
+    img: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
+}
 
 const Services = () =>
     <Flex
