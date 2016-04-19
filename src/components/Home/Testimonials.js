@@ -16,7 +16,7 @@ const sampleCopy = `
     sed, ultricies sapien.
 `
 
-const Testimonial = ({ img, name, text, width }) =>
+const Testimonial = ({ img, name, text }) =>
     <Flex
         align="center"
         column
