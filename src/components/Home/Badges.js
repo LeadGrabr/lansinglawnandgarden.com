@@ -17,6 +17,7 @@ export default class Badges extends Component {
     render() {
         return (
             <BrandBadges
+                backgroundColor="primary"
                 badges={[
                     {
                         ...this.props,
@@ -34,6 +35,7 @@ export default class Badges extends Component {
                         heading: 'You\'ll love the results'
                     }
                 ]}
+                color="secondary"
             />
         )
     }
