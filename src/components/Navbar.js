@@ -5,6 +5,7 @@ import { Flex } from 'reflexbox'
 import { MainNav } from '.'
 import { default as Close } from 'react-icons/lib/md/close'
 import { default as Menu } from 'react-icons/lib/md/menu'
+import { default as color } from 'color'
 
 
 export default class Navbar extends Component {
@@ -16,12 +17,16 @@ export default class Navbar extends Component {
     state = {}
 
     render() {
-        const { rebass: { colors } } = this.context
+        const { black } = this.context.rebass.colors
         const { drawer } = this.state
         const iconSize = 20
         return (
             <Fixed style={{ width: '100%' }}>
-                <Toolbar>
+                <Toolbar
+                    style={{
+                        boxShadow: `0px -4px 10px ${color(black).alpha(0.4).rgbString()}`
+                    }}
+                >
                     <Flex
                         align="center"
                         justify="center"
@@ -54,7 +59,12 @@ export default class Navbar extends Component {
                         color="primary"
                         open={drawer}
                         style={{
-                            color: colors.black
+                            boxShadow: (
+                                !drawer
+                                ? null
+                                : `0px 0px 5px ${color(black).alpha(0.2).rgbString()}`
+                            ),
+                            color: black
                         }}
                         width="100%"
                     >
@@ -67,7 +77,10 @@ export default class Navbar extends Component {
                                 size={iconSize}
                             />
                         </Flex>
-                        <MainNav/>
+                        <MainNav
+                            backgroundColor="secondary"
+                            color="primary"
+                        />
                     </Drawer>
                 </Toolbar>
             </Fixed>

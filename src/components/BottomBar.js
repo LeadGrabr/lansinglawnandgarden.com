@@ -12,7 +12,10 @@ const BottomBar = () =>
         }}
     >
         <Container>
-            <MainNav/>
+            <MainNav
+                backgroundColor="default"
+                color="primary"
+            />
         </Container>
     </Base>
 
