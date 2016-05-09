@@ -1,74 +1,41 @@
-import { default as React, PropTypes } from 'react'
-import { Flex } from 'reflexbox'
+import { default as React } from 'react'
 import { default as hedgeTrimming } from './hedge-trimming.jpg'
 import { default as leafPickup } from './leaf-pickup-and-bagging.jpg'
 import { default as brushRemoval } from './brush-removal.jpg'
 import { default as mowing } from './mowing.jpg'
 import { default as mulchTurning } from './mulch-turning.jpg'
 import { default as flowerBedMulching } from './flower-bed-mulching.jpg'
-import { Heading } from 'rebass'
-
-const serviceSize = 275
-
-const Service = ({ img, name }) =>
-    <Flex
-        align="flex-end"
-        m={1}
-        style={{
-            backgroundImage: `url('${img}')`,
-            backgroundSize: 'cover',
-            height: serviceSize,
-            width: serviceSize
-        }}
-    >
-        <Heading
-            backgroundColor="default"
-            color="secondary"
-            level={4}
-            p={2}
-            style={{
-                width: '100%'
-            }}
-        >
-            {name}
-        </Heading>
-    </Flex>
-
-Service.propTypes = {
-    img: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired
-}
+import { default as ServicesComponent } from '@leadgrabr/services'
 
 const Services = () =>
-    <Flex
-        justify="space-around"
-        wrap
-    >
-        <Service
-            img={hedgeTrimming}
-            name="Hedge Trimming"
-        />
-        <Service
-            img={leafPickup}
-            name="Leaf Pickup & Bagging"
-        />
-        <Service
-            img={brushRemoval}
-            name="Brush Removal"
-        />
-        <Service
-            img={mowing}
-            name="Mowing"
-        />
-        <Service
-            img={mulchTurning}
-            name="Mulch Turning"
-        />
-        <Service
-            img={flowerBedMulching}
-            name="Flower-bed Mulching"
-        />
-    </Flex>
+    <ServicesComponent
+        services={[
+            {
+                img: hedgeTrimming,
+                name: 'Hedge Trimming'
+            },
+            {
+                img: leafPickup,
+                name: 'Leaf Pickup & Bagging'
+            },
+            {
+                img: brushRemoval,
+                name: 'Brush Removal'
+            },
+            {
+                img: mowing,
+                name: 'Mowing'
+            },
+            {
+                img: mulchTurning,
+                name: 'Mulch Turning'
+            },
+            {
+                img: flowerBedMulching,
+                name: 'Flower-bed Mulching'
+            }
+        ]}
+    />
 
 
 export default Services
